@@ -1,0 +1,8 @@
+function(peifeng_print_configuration_summary)
+  message(STATUS "")
+  message(STATUS "******** Summary ********")
+  message(STATUS "General:")
+  message(STATUS "CMake version         : ${CMAKE_VERSION}")
+  message(STATUS "CXX FLAGS             : ${CMAKE_CXX_FLAGS}")
+  message(STATUS "TORCH_CXX_FLAGS       : ${TORCH_CXX_FLAGS}")
+endfunction()
