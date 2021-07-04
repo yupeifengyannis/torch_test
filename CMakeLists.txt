@@ -11,9 +11,11 @@ set(CMAKE_CXX_FLAGS ${TORCH_CXX_FLAGS})
 
 include(cmake/Dependencies.cmake)
 
+add_subdirectory(${CMAKE_SOURCE_DIR}/stl)
+
 add_subdirectory(${CMAKE_SOURCE_DIR}/c10)
 add_subdirectory(${CMAKE_SOURCE_DIR}/aten)
-add_subdirectory(${CMAKE_SOURCE_DIR}/c++11)
+add_subdirectory(${CMAKE_SOURCE_DIR}/c++)
 add_subdirectory(${CMAKE_SOURCE_DIR}/example/register)
 add_subdirectory(${CMAKE_SOURCE_DIR}/op_test)
 
