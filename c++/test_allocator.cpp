@@ -786,7 +786,8 @@ TEST_F(TestStdAllocator, test_pool_allocator){
       public:
         Widget();
       private:
-        std::string str[4];
+        // std::string str[4];
+        char data[128];
     };
     __gnu_cxx::__pool_alloc<Widget> pool_alloc;
     EXPECT_EQ(sizeof(Widget), 128);
@@ -804,8 +805,9 @@ TEST_F(TestStdAllocator, test_pool_allocator){
       public:
         Widget1(){}
       private:
-        std::string str[4];
-        long data;
+        // std::string str[4];
+        // long data;
+        char data[136];
     };
     __gnu_cxx::__pool_alloc<Widget1> pool_alloc;
     EXPECT_EQ(sizeof(Widget1), 136);
